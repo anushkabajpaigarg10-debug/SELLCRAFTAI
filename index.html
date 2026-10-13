@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SellCraft AI - Product Listing Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">✦ SellCraft <span>AI</span></div>
+    <div class="tagline">Create better product listings</div>
+    <button id="themeBtn" class="secondary">☼ / ☾</button>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Turn your product details into powerful listings.</h1>
+      <p>Create product titles, descriptions, features, keywords and social captions.</p>
+    </section>
+
+    <div class="layout">
+      <section class="panel">
+        <h2>Product Details</h2>
+        <p class="muted">Enter your product information.</p>
+
+        <form id="productForm">
+          <label for="productName">Product Name *</label>
+          <input id="productName" maxlength="200" required
+                 placeholder="e.g. Handmade Floral Notebook">
+
+          <div class="two">
+            <div>
+              <label for="category">Category</label>
+              <input id="category" placeholder="e.g. Stationery">
+            </div>
+            <div>
+              <label for="audience">Target Audience</label>
+              <input id="audience" placeholder="e.g. Students">
+            </div>
+          </div>
+
+          <label for="details">Product Details *</label>
+          <textarea id="details" maxlength="2000" required
+                    placeholder="Describe the product's real features..."></textarea>
+
+          <div class="three">
+            <div>
+              <label for="tone">Tone</label>
+              <select id="tone">
+                <option>Friendly</option>
+                <option>Professional</option>
+                <option>Playful</option>
+                <option>Minimal</option>
+                <option>Premium</option>
+              </select>
+            </div>
+            <div>
+              <label for="platform">Platform</label>
+              <select id="platform">
+                <option>Instagram</option>
+                <option>Marketplace</option>
+                <option>Website</option>
+                <option>WhatsApp</option>
+                <option>Etsy</option>
+              </select>
+            </div>
+            <div>
+              <label for="language">Language</label>
+              <select id="language">
+                <option>English</option>
+                <option>Hindi</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="primary full" type="submit">✦ Generate Listing</button>
+          <p id="formStatus" class="status" role="status"></p>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="result-heading">
+          <h2>Generated Listing</h2>
+          <span class="badge">Editable</span>
+        </div>
+
+        <label for="outTitle">Product Title</label>
+        <textarea id="outTitle" placeholder="Your title appears here"></textarea>
+
+        <label for="outDescription">Description</label>
+        <textarea id="outDescription" class="large"
+                  placeholder="Your description appears here"></textarea>
+
+        <label for="outFeatures">Key Features</label>
+        <textarea id="outFeatures" placeholder="Key features appear here"></textarea>
+
+        <label for="outKeywords">Search Keywords</label>
+        <textarea id="outKeywords" placeholder="Search keywords appear here"></textarea>
+
+        <label for="outCaption">Social Media Caption</label>
+        <textarea id="outCaption" placeholder="Your caption appears here"></textarea>
+
+        <label for="outMissing">Missing Information</label>
+        <textarea id="outMissing" placeholder="Details you may need to add"></textarea>
+
+        <div class="actions">
+          <button class="secondary" id="copyAll">Copy All</button>
+          <button class="secondary" id="downloadBtn">Download .txt</button>
+          <button class="secondary" id="saveBtn">Save Draft</button>
+          <button class="primary" id="newBtn">New Listing</button>
+        </div>
+        <p id="resultStatus" class="status" role="status"></p>
+      </section>
+    </div>
+
+    <section class="panel saved">
+      <h2>Saved Drafts</h2>
+      <div id="savedList" class="saved-list">No drafts saved yet.</div>
+    </section>
+  </main>
+
+  <footer>SellCraft AI · Built with HTML, CSS and JavaScript</footer>
+  <script src="script.js"></script>
+</body>
+</html>
